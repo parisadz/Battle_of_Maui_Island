@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3966741167838895728}
   - component: {fileID: -1385962465837786796}
   - component: {fileID: 1978810406771452174}
-  - component: {fileID: -4563999429698228470}
+  - component: {fileID: 6797786082029821486}
   m_Layer: 0
   m_Name: Enemy_2
   m_TagString: Enemy
@@ -100,8 +100,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &-4563999429698228470
-BoxCollider2D:
+--- !u!60 &6797786082029821486
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -123,6 +123,27 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.66, y: 0.86}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.7107672, y: 0.11303875}
+      - {x: 0.4000224, y: 0.1461074}
+      - {x: 0.2820805, y: 0.41599554}
+      - {x: 0.1641387, y: 0.42400444}
+      - {x: 0.03516861, y: 0.16522284}
+      - {x: -0.10588364, y: 0.15420574}
+      - {x: -0.1159955, y: 0.25004473}
+      - {x: -0.69, y: 0.26999998}
+      - {x: -0.83, y: 0.13}
+      - {x: -0.83, y: -0.03}
+      - {x: -0.6400223, y: -0.14203577}
+      - {x: -0.57354987, y: -0.050546348}
+      - {x: -0.0060626343, y: -0.16798659}
+      - {x: 0.11393736, y: -0.36203578}
+      - {x: 0.11, y: -0.42999998}
+      - {x: 0.29407158, y: -0.42999998}
+      - {x: 0.43814316, y: -0.1360403}
+      - {x: 0.61333317, y: -0.1371961}
+      - {x: 0.712591, y: -0.04364584}
+      - {x: 0.7580537, y: -0.23984343}
+      - {x: 0.81444454, y: 0.026121113}
+      - {x: 0.77604026, y: 0.32785237}

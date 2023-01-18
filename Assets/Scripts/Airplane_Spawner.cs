@@ -8,7 +8,7 @@ public class Airplane_Spawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-            StartCoroutine(SpawnCars());
+            StartCoroutine(SpawnPlans());
     }
 
     // Update is called once per frame
@@ -17,18 +17,18 @@ public class Airplane_Spawner : MonoBehaviour
         
     }
 
-    void Cars()
+    void Plans()
     {
             int rand = Random.Range(0,Enemy.Length);
-            float randXPos= Random.Range(-1.72f,1.72f);
+            float randXPos= Random.Range(-1.87f,1.9f);
             Instantiate(Enemy[rand], new Vector3(randXPos, transform.position.y,transform.position.z) ,Quaternion.Euler(0,0,270));
         
     }
 
-    IEnumerator SpawnCars() {
+    IEnumerator SpawnPlans() {
        while(true){
              yield return new WaitForSeconds(4);
-               Cars();
+               Plans();
        }
        
     }

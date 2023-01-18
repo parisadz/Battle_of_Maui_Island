@@ -17,5 +17,8 @@ public class Airplane_Movement : MonoBehaviour
     void Update()
     {
         transform.position -= new Vector3(0,speed * Time.deltaTime,0);
+        if(transform.position.y <= -10) {
+            Destroy(gameObject);
+        }
     }
 }

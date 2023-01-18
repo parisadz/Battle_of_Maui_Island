@@ -54,7 +54,7 @@ public class Player_Movement : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.tag == "Enemy"){
                Time.timeScale = 0 ;
-               gameOverPanel.SetActive(true);
+            //    gameOverPanel.SetActive(true);
         }
         if (collision.gameObject.tag == "Coin"){
                CoinSound.Play();
