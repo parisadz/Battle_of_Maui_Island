@@ -6,7 +6,7 @@ public class Back_Movement : MonoBehaviour
 {
     public Renderer meshRendere;
 
-    public float speed = 0.1f;
+    public float speed = 0.2f;
 
     // Start is called before the first frame update
     void Start()

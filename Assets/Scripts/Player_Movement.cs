@@ -52,7 +52,7 @@ public class Player_Movement : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.gameObject.tag == "Cars"){
+        if (collision.gameObject.tag == "Enemy"){
                Time.timeScale = 0 ;
                gameOverPanel.SetActive(true);
         }
