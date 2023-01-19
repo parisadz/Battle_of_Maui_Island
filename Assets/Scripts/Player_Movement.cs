@@ -7,14 +7,14 @@ public class Player_Movement : MonoBehaviour
     public Transform transform;
     public float speed = 1.5f;
     public float rotationSpeed = 5f;
-    public  AudioSource Gasoline_sound;
+    public  AudioSource Gasoline;
     public Score_Manager score_Value;
-    public GameObject gameOverPanel;
+    public GameObject GameOverPanel;
 
     // Start is called before the first frame update
     void Start()
     {
-        // gameOverPanel.SetActive(false);
+        GameOverPanel.SetActive(false);
         Time.timeScale = 1;
     }
 
@@ -50,10 +50,10 @@ public class Player_Movement : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.tag == "Enemy"){
                Time.timeScale = 0 ;
-            //    gameOverPanel.SetActive(true);
+               GameOverPanel.SetActive(true);
         }
         if (collision.gameObject.tag == "Drop"){
-            //    Gasoline_sound.Play();
+            //    Gasoline.Play();
                score_Value.score += 10;
                Destroy(collision.gameObject);
         }
