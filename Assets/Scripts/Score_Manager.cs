@@ -11,14 +11,14 @@ public class Score_Manager : MonoBehaviour
     public static int lastScore = 0;
     public Text scoreText;
     public Text HighScoreText;
-    public Text lastScoreText;
+    public Text LastScoreText;
 
     void Start()
     {
         StartCoroutine(Score());
         highScore = PlayerPrefs.GetInt("high_score" , 0);
         HighScoreText.text = "High Score: " + highScore.ToString();
-        lastScoreText.text = "Last Score: " + lastScore.ToString();
+        LastScoreText.text = "Last Score: " + lastScore.ToString();
     }
 
     void Update()
@@ -31,10 +31,10 @@ public class Score_Manager : MonoBehaviour
     }
 
     IEnumerator Score() {
-        while(true){
-        yield return new WaitForSeconds(2);
-        score = score + 1;
-        lastScore = score;
+        while(true) {
+            yield return new WaitForSeconds(2);
+            score = score + 1;
+            lastScore = score;
         }
     }
 
