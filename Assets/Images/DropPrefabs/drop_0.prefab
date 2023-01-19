@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1145843090260950896}
   - component: {fileID: 1145843090260950899}
   - component: {fileID: 1145843090260950902}
+  - component: {fileID: -6583809072181340321}
   m_Layer: 0
   m_Name: drop_0
   m_TagString: Drop
@@ -119,4 +120,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transform: {fileID: 1145843090260950897}
-  speed: 4
+  speed: 2
+--- !u!58 &-6583809072181340321
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145843090260950898}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.2125
