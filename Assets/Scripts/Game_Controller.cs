@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class Game_Controller : MonoBehaviour
-{
+{    
     public Text highScoreText;
     public Text scoreText;
     public int score;
@@ -14,14 +14,14 @@ public class Game_Controller : MonoBehaviour
     public GameObject gamePausePanel;
     public GameObject gamePauseButton;
 
-    // Start is called before the first frame update
+    // // Start is called before the first frame update
     void Start()
     {
-        // gamePausePanel.SetActive(false);
-        // gamePauseButton.SetActive(true);
+        gamePausePanel.SetActive(false);
+        gamePauseButton.SetActive(true);
     }
 
-    // Update is called once per frame
+    // // Update is called once per frame
     void Update()
     {
         highScore = PlayerPrefs.GetInt("high_score");
@@ -39,6 +39,7 @@ public class Game_Controller : MonoBehaviour
         gamePausePanel.SetActive(true);
         gamePauseButton.SetActive(false);
     }
+
      public void ResumeGame() {
         Time.timeScale = 1;
         gamePausePanel.SetActive(false);
