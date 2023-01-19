@@ -8,19 +8,17 @@ public class Score_Manager : MonoBehaviour
 {
     public int score = 0;
     public int highScore;
-
     public static int lastScore = 0;
-
     public Text scoreText;
-      public Text HighScoreText;
-        public Text lastScoreText;
+    public Text HighScoreText;
+    public Text lastScoreText;
+
     void Start()
     {
         StartCoroutine(Score());
-
-        // highScore = PlayerPrefs.GetInt("high_score" , 0);
-        // HighScoreText.text = "High Score: " + highScore.ToString();
-        // lastScoreText.text = "Last Score: " + lastScore.ToString();
+        highScore = PlayerPrefs.GetInt("high_score" , 0);
+        HighScoreText.text = "High Score: " + highScore.ToString();
+        lastScoreText.text = "Last Score: " + lastScore.ToString();
     }
 
     void Update()
@@ -29,7 +27,6 @@ public class Score_Manager : MonoBehaviour
         if (score > highScore) {
             highScore = score;
             PlayerPrefs.SetInt("high_score", highScore);
-        
         }
     }
 
@@ -42,9 +39,7 @@ public class Score_Manager : MonoBehaviour
     }
 
      IEnumerator Reload() {
-      
         yield return new WaitForSeconds(10);
         SceneManager.LoadScene("Game");
-
-        }
+    }
 }
