@@ -5,8 +5,8 @@ using UnityEngine;
 public class Airplane_Movement : MonoBehaviour
 {
     public Transform transform;
-
     public float speed = 4f;
+    
     // Start is called before the first frame update
     void Start()
     {

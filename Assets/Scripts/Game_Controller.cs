@@ -13,12 +13,17 @@ public class Game_Controller : MonoBehaviour
     public Score_Manager score_manager;
     public GameObject gamePausePanel;
     public GameObject gamePauseButton;
+    public AudioClip GameOver;
+    AudioSource GameOver_sound;
+    public AudioClip Back_Music;
+    AudioSource Back_sound;
 
     // // Start is called before the first frame update
     void Start()
     {
         gamePausePanel.SetActive(false);
         gamePauseButton.SetActive(true);
+        GameOver_sound = GetComponent<AudioSource>();
     }
 
     // // Update is called once per frame
@@ -38,6 +43,10 @@ public class Game_Controller : MonoBehaviour
         Time.timeScale = 0;
         gamePausePanel.SetActive(true);
         gamePauseButton.SetActive(false);
+        Back_sound.clip = Back_Music;
+        Back_sound.Stop();
+        GameOver_sound.clip = GameOver;
+        GameOver_sound.Play();
     }
 
      public void ResumeGame() {

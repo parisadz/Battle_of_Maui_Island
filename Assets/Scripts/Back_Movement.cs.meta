@@ -3,7 +3,9 @@ guid: 440f8c61ba6273a43bccf35fef1399e2
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - meshRendere: {instanceID: 0}
+  - Back_Music: {fileID: 8300000, guid: d0cc39071d3c6d64b8374ca4441b3554, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -3,7 +3,13 @@ guid: d58a5bae07dd6a94fac4c8df816092f5
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - highScoreText: {instanceID: 0}
+  - scoreText: {instanceID: 0}
+  - score_manager: {instanceID: 0}
+  - gamePausePanel: {instanceID: 0}
+  - gamePauseButton: {instanceID: 0}
+  - GameOver: {fileID: 8300000, guid: 3bd986f8f67343844a5c8f8b01d50a5a, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

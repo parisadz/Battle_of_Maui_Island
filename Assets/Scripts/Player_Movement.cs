@@ -7,20 +7,20 @@ public class Player_Movement : MonoBehaviour
     public Transform transform;
     public float speed = 1.5f;
     public float rotationSpeed = 5f;
-    public  AudioSource Gasoline;
+    public AudioClip Gasoline;
+    AudioSource sound;
     public Score_Manager score_Value;
     public GameObject GameOverPanel;
 
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
         GameOverPanel.SetActive(false);
         Time.timeScale = 1;
+        sound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
        Movment();
        Clamp();
     }
@@ -52,11 +52,12 @@ public class Player_Movement : MonoBehaviour
                Time.timeScale = 0 ;
                GameOverPanel.SetActive(true);
         }
+        
         if (collision.gameObject.tag == "Drop"){
-            //    Gasoline.Play();
+               sound.clip = Gasoline;
+               sound.Play();
                score_Value.score += 10;
                Destroy(collision.gameObject);
         }
-        
     }
 }
