@@ -18,7 +18,6 @@ public class Score_Manager : MonoBehaviour
         StartCoroutine(Score());
         highScore = PlayerPrefs.GetInt("high_score" , 0);
         HighScoreText.text = "High Score: " + highScore.ToString();
-        LastScoreText.text = "Last Score: " + lastScore.ToString();
     }
 
     void Update()
