@@ -15,8 +15,6 @@ public class Game_Controller : MonoBehaviour
     public GameObject gamePauseButton;
     public AudioClip GameOver;
     AudioSource GameOver_sound;
-    public AudioClip Back_Music;
-    AudioSource Back_sound;
 
     // // Start is called before the first frame update
     void Start()
@@ -24,6 +22,8 @@ public class Game_Controller : MonoBehaviour
         gamePausePanel.SetActive(false);
         gamePauseButton.SetActive(true);
         GameOver_sound = GetComponent<AudioSource>();
+        GameOver_sound.clip = GameOver;
+        GameOver_sound.Stop();
     }
 
     // // Update is called once per frame
@@ -43,8 +43,6 @@ public class Game_Controller : MonoBehaviour
         Time.timeScale = 0;
         gamePausePanel.SetActive(true);
         gamePauseButton.SetActive(false);
-        Back_sound.clip = Back_Music;
-        Back_sound.Stop();
         GameOver_sound.clip = GameOver;
         GameOver_sound.Play();
     }
